@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: bandnames_production
+  username: bandnames
+  password: <%= ENV['BANDNAMES_DATABASE_PASSWORD'] %>
+
