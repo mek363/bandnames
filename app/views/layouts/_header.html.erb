@@ -1,11 +1,24 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "Bandnames", '#', id: "logo" %>
+    <%= link_to "Bandnamit", '#', id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home",   root_path %></li>
-        <li><%= link_to "Login",  '#' %></li>
-        <li><%= link_to "Signup", signup_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <% if logged_in? %>
+              <li><%= link_to "Profile", current_user %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Logout", logout_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Login", login_path %></li>
+              <li><%= link_to "Signup", signup_path %></li>
+            <% end %>
+            </ul>
+          </li>
       </ul>
     </nav>
   </div>
