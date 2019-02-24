@@ -1,6 +1,15 @@
-<dl>
-<dt>Name</dt><dd><%= @user.name %></dd>
-<dt>Email</dt><dd><%= @user.email %></dd>
-<dt>Created</dt><dd><%= @user.created_at %></dd>
-<dt>Updated</dt><dd><%= @user.updated_at %></dd>
-</dl>
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @user.bandnames.any? %>
+      <h3>Band Names (<%= @user.bandnames.count %>)</h3>
+    <% end %>
+  </div>
+</div>

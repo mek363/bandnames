@@ -1,6 +1,12 @@
-<p>Soon you will be able to:</p>
+<h1>Band Names</h1>
 <ul>
-    <li>Enter cool band names</li>
-    <li>Vote on the coolest band names</li>
+    <li>
+    <% if logged_in? %>
+        <%= link_to "Enter a band name", idea_path %>
+    <% else %>
+        Login to enter a band name
+    <% end %>
+    </li>
+    <li>Vote on the coolest band names (coming soon)</li>
     <li>And lots more... (maybe)</li>
 </ul>
