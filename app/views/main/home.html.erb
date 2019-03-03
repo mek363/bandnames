@@ -1,12 +1,22 @@
-<h1>Band Names</h1>
-<ul>
-    <li>
-    <% if logged_in? %>
-        <%= link_to "Enter a band name", idea_path %>
-    <% else %>
-        Login to enter a band name
-    <% end %>
-    </li>
-    <li>Vote on the coolest band names (coming soon)</li>
-    <li>And lots more... (maybe)</li>
-</ul>
+<h1>Welcome!</h1>
+
+<% if !logged_in? %>
+    <p>Do you have a great idea for a band name? Do you want to see other great ideas for band names? This is the place for you!
+    Enter your band name ideas, vote on other band name ideas... Become a <i>Bandnamer</i>.</p>
+    <p>
+    <%= link_to "Log in", login_path %> or 
+    <%= link_to "Sign up", signup_path %> to get started.
+    </p> 
+<% else %>
+    <ul>
+        <li><%= link_to "Enter a band name", idea_path %></li>
+        <li>Vote on band names (coming soon)</li>
+    </ul>
+<% end %>
+
+<h1>Top Band Names</h1>
+
+<ol>
+    <%= render @bandnames %>
+</ol>
+<%= will_paginate @bandnames %>
