@@ -10,13 +10,21 @@
 <% else %>
     <ul>
         <li><%= link_to "Enter a band name", idea_path %></li>
-        <li>Vote on band names (coming soon)</li>
+        <li>Click on any band name to vote</li>
     </ul>
 <% end %>
 
 <h1>Top Band Names</h1>
 
-<ol>
-    <%= render @bandnames %>
-</ol>
+<table class="tablesm table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Rank</th>
+    </tr>
+  </thead>
+  <tbody>
+        <%= render @bandnames %>
+  </tbody>
+</table>
 <%= will_paginate @bandnames %>

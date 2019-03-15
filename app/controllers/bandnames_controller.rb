@@ -18,6 +18,12 @@ class BandnamesController < ApplicationController
     end
   end
 
+  def vote 
+    @bandname = Bandname.find(params[:id])
+    @bandname.upvote_by current_user, {vote_weight: params[:rank]}
+    redirect_to @bandname
+  end  
+  
   private
 
     def bandname_params
