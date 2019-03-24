@@ -4,19 +4,18 @@
     <p>Do you have a great idea for a band name? Do you want to see other great ideas for band names? This is the place for you!
     Enter your band name ideas, vote on other band name ideas... Become a <i>Bandnamer</i>.</p>
     <p>
-    <%= link_to "Log in", login_path %> or 
-    <%= link_to "Sign up", signup_path %> to get started.
+    <%= link_to "Log in", login_path, :class => "btn btn-primary" %> or 
+    <%= link_to "Sign up", signup_path, :class => "btn btn-primary" %> to get started.
     </p> 
 <% else %>
-    <ul>
-        <li><%= link_to "Enter a band name", idea_path %></li>
-        <li>Click on any band name to vote</li>
+    <p><%= link_to "Enter a band name", idea_path, :class => "btn btn-primary" %></p>
+    <p>Click on any band name to vote</p>
     </ul>
 <% end %>
 
 <h1>Top Band Names</h1>
 
-<table class="tablesm table-striped">
+<table class="tablemd table-striped">
   <thead>
     <tr>
       <th scope="col">Name</th>

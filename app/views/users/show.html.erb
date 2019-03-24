@@ -4,8 +4,19 @@
 </h1>
 <% if @bandnames.any? %>
   <h2>Band Names (<%= @bandnames.count %>)</h2>
-  <ol>
-      <%= render @bandnames %>
-  </ol>
+  <table class="tablemd table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Rank</th>
+      </tr>
+    </thead>
+    <tbody>
+          <%= render @bandnames %>
+    </tbody>
+  </table>
   <%= will_paginate @bandnames %>
 <% end %>
+<br>
+<p><%= link_to "Home", root_path, :class => "btn btn-primary" %></p>
+
