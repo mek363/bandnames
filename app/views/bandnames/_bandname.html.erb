@@ -10,5 +10,6 @@
     <% bandname.blank_stars.times do %>
         <span class="glyphicon glyphicon-star-empty"></span>
     <% end %>
+    (<%= bandname.cached_votes_total %>)
   </td>
 </tr>
