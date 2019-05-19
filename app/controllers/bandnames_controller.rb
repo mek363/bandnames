@@ -21,7 +21,7 @@ class BandnamesController < ApplicationController
   def vote 
     @bandname = Bandname.find(params[:id])
     @bandname.upvote_by current_user, {vote_weight: params[:rank]}
-    redirect_to @bandname
+    redirect_back(fallback_location: root_url)
   end  
   
   private

@@ -5,10 +5,10 @@
   <td>
     <%= number_with_precision(bandname.cached_weighted_average, precision: 2) %>
     <% bandname.rating.to_i.times do  %>
-        <span class="glyphicon glyphicon-star"></span>
+      <%= render 'layouts/voteup' %>
     <% end %>
     <% bandname.blank_stars.times do %>
-        <span class="glyphicon glyphicon-star-empty"></span>
+      <%= render 'layouts/votedn' %>
     <% end %>
     (<%= bandname.cached_votes_total %>)
   </td>

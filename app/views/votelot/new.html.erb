@@ -1,0 +1,20 @@
+<h1>Vote</h1>
+<p>Vote on any or all of the following by clicking the stars.</p>
+  <table class="tablemd table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Band name</th>
+        <th scope="col">Your vote</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @lot.each do |b| %>
+        <tr>
+            <td scope="col"><%= b.name %></td>
+            <td scope="col"><%= render partial: 'layouts/vote', locals: {bandname: b} %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<br>
+<p><%= link_to "Home", root_path, :class => "btn btn-primary" %></p>

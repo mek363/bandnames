@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get    '/vote',    to: 'votelot#new'
+
   get    '/idea',    to: 'bandnames#new'
   post   '/idea',    to: 'bandnames#create'
 

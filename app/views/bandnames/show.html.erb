@@ -2,51 +2,11 @@
 <h1>
   <%= @bandname.name %>
 </h1>
+<p>Vote by clicking the stars.</p>
 <ul>
   <li>Created by <%= User.find(@bandname.user_id).name %></li>
   <% if logged_in? %>
-    <li>
-      Your vote:
-      <!-- 1 star -->
-      <%= link_to like_bandname_path(@bandname, :rank => 1), method: :put do %>
-        <% if current_user_vote > 0 %>
-          <span class="glyphicon glyphicon-star"></span>
-        <% else %>
-          <span class="glyphicon glyphicon-star-empty"></span>
-        <% end %>
-      <% end %>
-      <!-- 2 star -->
-      <%= link_to like_bandname_path(@bandname, :rank => 2), method: :put do %>
-        <% if current_user_vote > 1 %>
-          <span class="glyphicon glyphicon-star"></span>
-        <% else %>
-          <span class="glyphicon glyphicon-star-empty"></span>
-        <% end %>
-      <% end %>
-      <!-- 3 star -->
-      <%= link_to like_bandname_path(@bandname, :rank => 3), method: :put do %>
-        <% if current_user_vote > 2 %>
-          <span class="glyphicon glyphicon-star"></span>
-        <% else %>
-          <span class="glyphicon glyphicon-star-empty"></span>
-        <% end %>
-      <% end %>
-      <!-- 4 star -->
-      <%= link_to like_bandname_path(@bandname, :rank => 4), method: :put do %>
-        <% if current_user_vote > 3 %>
-          <span class="glyphicon glyphicon-star"></span>
-        <% else %>
-          <span class="glyphicon glyphicon-star-empty"></span>
-        <% end %>
-      <% end %>
-      <!-- 5 star -->
-      <%= link_to like_bandname_path(@bandname, :rank => 5), method: :put do %>
-        <% if current_user_vote > 4 %>
-          <span class="glyphicon glyphicon-star"></span>
-        <% else %>
-          <span class="glyphicon glyphicon-star-empty"></span>
-        <% end %>
-      <% end %>
+    <li>Your vote: <%= render partial: 'layouts/vote', locals: {bandname: @bandname} %></li>
   <% end %>
 </ul>
 <p><%= link_to "Home", root_path, :class => "btn btn-primary" %></p>

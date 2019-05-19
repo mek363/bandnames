@@ -1,0 +1,40 @@
+      <!-- 1 star -->
+      <%= link_to like_bandname_path(bandname, :rank => 1), method: :put do %>
+        <% if current_user_vote(bandname) > 0 %>
+          <%= render 'layouts/voteup' %>
+        <% else %>
+          <%= render 'layouts/votedn' %>
+        <% end %>
+      <% end %>
+      <!-- 2 star -->
+      <%= link_to like_bandname_path(bandname, :rank => 2), method: :put do %>
+        <% if current_user_vote(bandname) > 1 %>
+          <%= render 'layouts/voteup' %>
+        <% else %>
+          <%= render 'layouts/votedn' %>
+        <% end %>
+      <% end %>
+      <!-- 3 star -->
+      <%= link_to like_bandname_path(bandname, :rank => 3), method: :put do %>
+        <% if current_user_vote(bandname) > 2 %>
+          <%= render 'layouts/voteup' %>
+        <% else %>
+          <%= render 'layouts/votedn' %>
+        <% end %>
+      <% end %>
+      <!-- 4 star -->
+      <%= link_to like_bandname_path(bandname, :rank => 4), method: :put do %>
+        <% if current_user_vote(bandname) > 3 %>
+          <%= render 'layouts/voteup' %>
+        <% else %>
+          <%= render 'layouts/votedn' %>
+        <% end %>
+      <% end %>
+      <!-- 5 star -->
+      <%= link_to like_bandname_path(bandname, :rank => 5), method: :put do %>
+        <% if current_user_vote(bandname) > 4 %>
+          <%= render 'layouts/voteup' %>
+        <% else %>
+          <%= render 'layouts/votedn' %>
+        <% end %>
+      <% end %>

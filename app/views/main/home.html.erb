@@ -9,7 +9,8 @@
     </p> 
 <% else %>
     <p><%= link_to "Enter a band name", idea_path, :class => "btn btn-primary" %></p>
-    <p>Click on any band name to vote</p>
+    <p><%= link_to "Vote on some random band names", vote_path, :class => "btn btn-primary" %></p>
+    <p>Or click on any band name to vote</p>
     </ul>
 <% end %>
 
