@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',        '5.1.6'
+gem 'rails',        '5.1.6.2'
 gem 'acts_as_votable', '0.12.0'
 gem 'will_paginate',  '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
