@@ -15,6 +15,7 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
 # patches
 gem 'loofah',       '2.3.1'
+gem 'bundler',      '2.0.2'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
