@@ -5,11 +5,12 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(email: params[:session][:email].downcase)
-    if user
+    # Users without password digest were created before passwords were added to the database
+    if user && (!user.password_digest || user.authenticate(params[:session][:password]))
       log_in user
       redirect_to user
     else
-      flash[:danger] = "I don't know who you are!" # Not quite right!
+      flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
     end
   end
