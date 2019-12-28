@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     # Users without password digest were created before passwords were added to the database
     if user && (!user.password_digest || user.authenticate(params[:session][:password]))
       log_in user
-      redirect_to user
+      redirect_back_or user
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
