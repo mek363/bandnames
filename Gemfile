@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
-gem 'rails',                    '5.1.6.2'
+gem 'rails',                    '>= 5.2.4.2'
 gem 'acts_as_votable',          '0.12.0'
-gem 'will_paginate',            '3.1.6'
+gem 'will_paginate',            '~> 3.3.0'
 gem 'bootstrap-will_paginate',  '1.0.0'
 gem 'bootstrap-sass',           '3.4.1'
 gem 'puma',                     '3.12.4'
@@ -14,6 +14,7 @@ gem 'jquery-rails',             '4.3.1'
 gem 'turbolinks',               '5.0.1'
 gem 'jbuilder',                 '2.7.0'
 gem 'bcrypt',                   '3.1.11'
+
 # patches
 gem 'loofah',       '2.3.1'
 gem 'bundler',      '2.0.2'
