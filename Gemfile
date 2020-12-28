@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.5.3'
+ruby '2.6.0'
 
 gem 'rails',                    '>= 5.2.4.2'
 gem 'acts_as_votable',          '0.12.0'
@@ -14,10 +14,10 @@ gem 'jquery-rails',             '>= 4.3.4'
 gem 'turbolinks',               '5.0.1'
 gem 'jbuilder',                 '2.7.0'
 gem 'bcrypt',                   '3.1.11'
+gem 'bundler',                  '2.2.3'
 
 # patches
 gem 'loofah',       '2.3.1'
-gem 'bundler',      '2.0.2'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
