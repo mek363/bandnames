@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 ruby '2.6.6'
 
-gem 'rails',                    '>= 5.2.4.2'
-gem 'acts_as_votable',          '0.12.0'
+gem 'rails',                    '>= 6.0.0'
+gem 'acts_as_votable',          '0.13.1'
 gem 'will_paginate',            '~> 3.3.0'
 gem 'bootstrap-will_paginate',  '1.0.0'
 gem 'bootstrap-sass',           '3.4.1'
 gem 'puma',                     '3.12.6'
-gem 'sass-rails',               '5.0.6'
+gem 'sass-rails',               '6.0.0'
 gem 'uglifier',                 '3.2.0'
 gem 'coffee-rails',             '4.2.2'
 gem 'jquery-rails',             '>= 4.3.4'
@@ -20,7 +20,7 @@ gem 'bundler',                  '2.2.3'
 gem 'loofah',       '2.3.1'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.13'
+  gem 'sqlite3', '1.4.2'
   gem 'byebug',  '9.0.6', platform: :mri
 end
 
@@ -32,7 +32,7 @@ group :development do
 end
 
 group :test do
-  gem 'rails-controller-testing', '1.0.2'
+  gem 'rails-controller-testing', '1.0.5'
   gem 'minitest',                 '5.10.3'
   gem 'minitest-reporters',       '1.1.14'
   gem 'guard',                    '2.13.0'
