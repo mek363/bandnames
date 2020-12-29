@@ -14,7 +14,8 @@ gem 'jquery-rails',             '>= 4.3.4'
 gem 'turbolinks',               '5.0.1'
 gem 'jbuilder',                 '2.7.0'
 gem 'bcrypt',                   '3.1.11'
-gem 'bundler',                  '2.1.4'
+gem 'bundler',                  '2.2.3'
+gem 'rake',                     '13.0.3'
 
 # patches
 gem 'loofah',       '2.3.1'
