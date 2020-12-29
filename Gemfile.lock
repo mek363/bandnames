@@ -237,7 +237,6 @@ DEPENDENCIES
   puma (= 3.12.6)
   rails (>= 5.2.4.2)
   rails-controller-testing (= 1.0.2)
-  rake (= 13.0.3)
   sass-rails (= 5.0.6)
   spring (= 2.0.2)
   spring-watcher-listen (= 2.0.1)
@@ -249,7 +248,7 @@ DEPENDENCIES
   will_paginate (~> 3.3.0)
 
 RUBY VERSION
-   ruby 2.6.0p0
+   ruby 2.6.6p146
 
 BUNDLED WITH
    2.2.3
