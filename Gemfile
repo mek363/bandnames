@@ -17,7 +17,7 @@ gem 'bcrypt',                   '3.1.11'
 gem 'bundler',                  '2.2.3'
 
 # patches
-gem 'loofah',       '2.3.1'
+gem 'loofah',       '2.19.1'
 
 group :development, :test do
   gem 'sqlite3', '1.4.2'
